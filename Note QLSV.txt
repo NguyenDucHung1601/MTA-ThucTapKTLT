@@ -1,0 +1,27 @@
+======== struct QuanLiSinhVien =======
+
+//typedef struct{
+//	string HoTen;
+//	int ngay, thang, nam;
+//	char MaSV[8];
+//	char MaLop[10];
+//	float DiemTBTL;
+//}Data;
+//typedef struct Node{
+//	Data data;
+//	struct Node *next;
+//	struct Node *prev;
+//};
+//typedef struct List {
+//	struct Node *first;
+//	struct Node *last;
+//};
+
+
+
+
+
+https://www.youtube.com/watch?v=VGoyqHHz5CE
+
+
+

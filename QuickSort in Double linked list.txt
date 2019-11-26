@@ -1,0 +1,43 @@
+void quickSort2(int choice, int left, int right)
+{
+	if (left <= right) {
+		Node *key = element((left + right) / 2);
+		int i = left;
+		int j = right;
+		while (i <= j) {
+			switch (choice) {
+			case 1:
+				while (strcmp(element(i)->MaSV, key->MaSV) < 0)	i++;
+				while (strcmp(element(j)->MaSV, key->MaSV) > 0)	j--;
+				break;
+			case 2:
+				while (strcmp(element(i)->MaLop, key->MaLop) < 0)	i++;
+				while (strcmp(element(j)->MaLop, key->MaLop) > 0)	j--;
+				break;
+			case 3:
+				while (compareName(element(i), key) < 0)	i++;
+				while (compareName(element(j), key) > 0)	j--;
+				break;
+			case 4:
+				while (compareDate(element(i), key) < 0)	i++;
+				while (compareDate(element(j), key) > 0)	j--;
+				break;
+			case 5:
+				while (element(i)->DiemTBTL > key->DiemTBTL)	i++;
+				while (element(j)->DiemTBTL < key->DiemTBTL)	j--;
+				break;
+			case 6:
+				while (compareMix(element(i), key) < 0)	i++;
+				while (compareMix(element(j), key) > 0)	j--;
+				break;
+			}
+			if (i <= j) {
+				swap(element(i), element(j));
+				i++;
+				j--;
+			}
+			if (left < j)	quickSort2(choice, left, j);
+			if (right > i)	quickSort2(choice, i, right);
+		}
+	}
+}
